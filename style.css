@@ -168,6 +168,9 @@ a{
 
 
 @media (max-width:1550px){
+    a{
+        font-size:5rem;
+    }
     #spotifyIframe{
         width: 20rem;
         height: 5rem;
