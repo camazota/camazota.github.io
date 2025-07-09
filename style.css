@@ -10,10 +10,10 @@
 
 
 :root {
-    --text-color: #e9e9e9; 
+    --text-color: #e9e9e9;
     --border-color: #66666696;
     --background-color: #ecf0f1;
-    --text-shadow:#ffffff71;
+    --text-shadow: #ffffff71;
     --second-text-color: #818181;
 }
 
@@ -49,21 +49,21 @@ body {
     filter: brightness(0.15);
 }
 
-a{
+a {
     text-decoration: none;
     font-size: 6rem;
     transition: .4s;
 }
 
 
-.option{
+.option {
     background-color: rgba(0, 0, 0, 0.637);
     border-radius: 3rem;
     padding-left: 1rem;
     height: 5rem;
     margin-bottom: 1.5rem;
-    width: 25%;
-    min-width: 20rem;
+    width: 30%;
+    min-width: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +74,7 @@ a{
 .option a {
     text-decoration: none;
     font-family: "roboto";
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     font-weight: lighter;
@@ -83,13 +83,13 @@ a{
     margin-left: 1rem;
 }
 
-.option svg{
+.option svg {
     fill: var(--text-color);
 }
 
 
-.option a:hover{
-    color: var(--second-text-color) ;
+.option a:hover {
+    color: var(--second-text-color);
 }
 
 
@@ -105,7 +105,7 @@ a{
     user-select: none;
 }
 
-.spotify{
+.spotify {
     padding-bottom: 1rem;
     position: absolute;
     bottom: 0;
@@ -115,92 +115,255 @@ a{
     left: 2rem;
 }
 
-#spotifyIframe{
+#spotifyIframe {
     width: 25rem;
     height: 15rem;
 }
 
-.main-nav{
-    padding-top: 13rem;
+.main-nav {
     width: 100%;
     height: 100%;
+    padding-bottom: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     transition: .4s;
 }
 
 
 
-.bottom-nav{
+.bottom-nav {
     position: absolute;
     right: 1.3rem;
     bottom: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 
-.social{
+.social {
     display: flex;
     transition: .2s ease-in-out;
 
 }
 
-.social svg{
+.social svg {
     fill: var(--text-color);
+    width: 2.5rem;
 }
 
 .social:hover {
-   transform: scale(1.2);
-   fill: rgb(0, 0, 0);
+    transform: scale(1.2);
+    fill: rgb(0, 0, 0);
 }
 
 
-@media (max-width:1750px){
-    #spotifyIframe{
+.menu {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+}
+
+.menu-button,
+.cancel-button {
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+    width: 3rem;
+    height: 3rem;
+
+}
+
+.menu-button:hover,
+.cancel-button:hover {
+    transform: scale(1.2);
+}
+
+
+
+@media (max-width:1750px) {
+    #spotifyIframe {
         width: 20rem;
         height: 10rem;
     }
 }
 
 
-@media (max-width:1550px){
+@media (max-width:1550px) {
 
-    #spotifyIframe{
+    #spotifyIframe {
         width: 20rem;
-        height: 5rem;
     }
 }
 
-@media (max-width:1200px){
+
+@media (max-width:1280px) {
     a {
         font-size: 5rem;
     }
-    .main-nav{
-        transform: translateY(-5rem);
-    }
 }
 
 
-
-
-@media (max-width:1080px){
-    a{
-        font-size: 4rem;
+@media (max-width:1024px) {
+    .menu {
+        display: flex;
+        top: 2.5rem;
+        right: 2.5rem;
     }
-    #spotifyIframe{
+
+    #spotifyIframe {
         display: none;
     }
 
-    .bottom-nav{
+    .menu-button {
+        display: flex;
+    }
+
+
+    .social svg{
+        width: 3rem;
+        gap: 1rem;
+    }
+
+    .bottom-nav {
         padding-left: 2rem;
         flex-direction: row;
         bottom: 1.5rem;
         width: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+}
+
+@media (max-width:912px) {
+    .option{
+        min-width:37rem;
+    }
+
+    .menu{
+        top: 2.8rem;
+    }
+}
+
+@media (max-height:1368px) {
+    a {
+        font-size: 5rem;
+    }
+
+    .option{
+        height: 7rem;
+    }
+
+    .option a{
+        font-size: 1.8rem;
+    }
+
+    .menu{
+        top: 2.2rem;
+    }
+
+    .menu-button, .cancel-button{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (max-height: 1180px){
+    .option{
+        height: 6rem;
+    }
+}
+
+@media (max-height: 1080px){
+    .option{
+        height: 5rem;
+    }
+
+    .menu-button, .cancel-button{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width:853px) {
+    .option{
+        min-width: 30rem;
+    }
+}
+
+@media (max-width:540px) {
+    a {
+        font-size: 4rem;
+    }
+
+    .option{
+        min-width:20rem ;
+    }
+
+    .menu{
+        top: 2.8rem;
+    }
+}
+
+@media (max-width:430px) {
+    a {
+        font-size: 3rem;
+    }
+
+    .menu {
+        right: 1rem;
+    }
+
+    .option{
+        min-width: 18rem;
+    }
+
+    .bottom-nav{
+        gap: 1rem;
+    }
+    .social{
+        width: 2rem;
+    }
+}
+
+
+@media (max-width:360px) {
+
+    .menu {
+        right: 1rem;
+    }
+
+    a{
+        font-size: 2.5rem;
+    }
+
+    .social{
+        width: 1.5rem;
+    }
+
+    .menu-button,.cancel-button{
+        width: 2rem;
+    }
+}
+
+
+@media (max-height:915px) {
+    .option{
+        height: 4.2rem;
+    }
+
+    .option a{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height:600px) {
+    .main-nav{
+        transform: translateY(3rem);
     }
 }
